@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2 class="price">5</h2>
+        <h1 class="buy">buy</h1>
+        <h2 class="confirm">confirm</h2>
+        <h2 class="ok">ok</h2>
+        <h2 class="balance">50</h2>
+        
+    </main>
+    <script>
+        const price = document.querySelector('.price');
+        const buy = document.querySelector('.buy');
+        const confrm = document.querySelector('.confirm');
+        const ok = document.querySelector('.ok');
+        const balance = document.querySelector('.balance');
+
+        confrm.style.display = 'none';
+        ok.style.display = 'none';
+
+
+        function changePrice() {
+        price.textContent =  Math.floor(Math.random() * 100) + 1;
+        }
+        setInterval(changePrice, 3000);
+
+        buy.addEventListener('click', () => {
+        confrm.style.display = 'block';
+        });
+
+        confrm.addEventListener('click', () => {
+            if (parseInt(balance.textContent) >= parseInt(price.textContent)) {
+                balance.textContent = parseInt(balance.textContent) - parseInt(price.textContent);
+                confrm.style.display = 'none';
+                ok.style.display = 'block';
+            } else {
+                alert('Not enough money!');
+            } 
+            ok.style.display = 'block';
+            confrm.style.display = 'none';
+        });
+        ok.addEventListener('click', () => {
+            ok.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

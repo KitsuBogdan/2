@@ -1,0 +1,44 @@
+.price{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    background-color: black;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px; 
+}
+
+.buy{
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #f00;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px; 
+}
+
+.confirm{
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #0f0;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px; 
+}
+
+.ok{
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #00f;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px; 
+}
